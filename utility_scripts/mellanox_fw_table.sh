@@ -7,6 +7,8 @@
 #   - Updated minimum version numbers for  based on more recent information from HoPS team
 #   - Added version details for ConnectX-6 Lx
 #   - Switched out flint (NVIDIA proprietary) with mstflint (Open source OFED) same as in original update script
+# 5/18/2026 Anand Manian
+#   - Added version details for ConnectX-5 
 
 set -u
 
@@ -74,6 +76,9 @@ fw_upgrade_required() {
     "ConnectX-6 Lx")
       minimum_version="26.46.3048"
       ;;
+    "ConnectX-5 Ex")
+      minimum_version="16.35.8002"
+      ;;  
     *)
       printf "N/A"
       return
